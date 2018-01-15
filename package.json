@@ -1,0 +1,28 @@
+{
+  "private": true,
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "@types/jest": "^22.0.1",
+    "@types/puppeteer": "^0.13.9",
+    "jest": "^22.1.1",
+    "jest-environment-node": "^22.1.0",
+    "puppeteer": "^1.0.0",
+    "ts-jest": "^22.0.1",
+    "typescript": "^2.6.2"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "ts",
+      "json"
+    ],
+    "setupTestFrameworkScriptFile": "./setupTestFramework.js",
+    "testEnvironment": "./PuppeteerEnvironment.js",
+    "testRegex": "\\.test\\.ts$",
+    "transform": {
+      "\\.ts$": "ts-jest"
+    }
+  }
+}
