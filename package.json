@@ -3,7 +3,7 @@
   "scripts": {
     "format": "prettier --write '{*,./src/**/*}.{js,ts}'",
     "lint": "tslint --project .",
-    "test": "jest"
+    "test": "jest --maxWorkers=$MAX_BROWSERS"
   },
   "devDependencies": {
     "@types/jest": "^22.0.1",
@@ -11,6 +11,7 @@
     "@types/puppeteer": "^0.13.9",
     "jest": "^22.1.1",
     "jest-environment-node": "^22.1.0",
+    "jest-jasmine2": "^22.1.1",
     "node-fetch": "^1.7.3",
     "prettier": "^1.10.2",
     "puppeteer": "^1.0.0",
@@ -28,6 +29,7 @@
     "setupTestFrameworkScriptFile": "./setupTestFramework.js",
     "testEnvironment": "./PuppeteerEnvironment.js",
     "testRegex": "\\.test\\.ts$",
+    "testRunner": "./runnerWithGlobalConfig.js",
     "transform": {
       "\\.ts$": "ts-jest"
     }
