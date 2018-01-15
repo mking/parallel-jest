@@ -1,13 +1,17 @@
 {
   "private": true,
   "scripts": {
+    "format": "prettier --write '{*,./src/**/*}.{js,ts}'",
     "test": "jest"
   },
-  "dependencies": {
+  "devDependencies": {
     "@types/jest": "^22.0.1",
+    "@types/node-fetch": "^1.6.7",
     "@types/puppeteer": "^0.13.9",
     "jest": "^22.1.1",
     "jest-environment-node": "^22.1.0",
+    "node-fetch": "^1.7.3",
+    "prettier": "^1.10.2",
     "puppeteer": "^1.0.0",
     "ts-jest": "^22.0.1",
     "typescript": "^2.6.2"
@@ -24,5 +28,8 @@
     "transform": {
       "\\.ts$": "ts-jest"
     }
+  },
+  "prettier": {
+    "singleQuote": true
   }
 }
