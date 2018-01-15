@@ -2,6 +2,7 @@
   "private": true,
   "scripts": {
     "format": "prettier --write '{*,./src/**/*}.{js,ts}'",
+    "lint": "tslint --project .",
     "test": "jest"
   },
   "devDependencies": {
@@ -14,6 +15,8 @@
     "prettier": "^1.10.2",
     "puppeteer": "^1.0.0",
     "ts-jest": "^22.0.1",
+    "tslint": "^5.9.1",
+    "tslint-config-prettier": "^1.6.0",
     "typescript": "^2.6.2"
   },
   "jest": {
