@@ -1,3 +1,3 @@
 import testReddit from './testReddit';
 
-it('tests python', () => testReddit('python'));
+it('tests ruby', () => testReddit('ruby'));
