@@ -1,3 +1,3 @@
 import testAlt from './testAlt';
 
-it('tests alt 1', () => testAlt('alt 1'));
+it('tests alt 1', () => testAlt('ethereum'));
