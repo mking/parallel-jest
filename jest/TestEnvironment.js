@@ -23,7 +23,7 @@ module.exports = class TestEnvironment extends NodeEnvironment {
     if (!global.browser) {
       console.log('--- new browser', process.pid);
       global.browser = await puppeteer.launch({
-        // headless: false
+        headless: false
       });
       global.page = await global.browser.newPage();
     } else {

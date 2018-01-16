@@ -1,3 +1,4 @@
+import retryIt from './retryIt';
 import testAlt from './testAlt';
 
-it('tests alt 4', () => testAlt('cardano'));
+retryIt('tests alt 4', () => testAlt('cardano'));

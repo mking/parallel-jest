@@ -1,3 +1,4 @@
+import retryIt from './retryIt';
 import testAlt from './testAlt';
 
-it('tests alt 6', () => testAlt('nem'));
+retryIt('tests alt 6', () => testAlt('nem'));

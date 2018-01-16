@@ -1,3 +1,4 @@
+import retryIt from './retryIt';
 import testAlt from './testAlt';
 
-it('tests alt 2', () => testAlt('ripple'));
+retryIt('tests alt 2', () => testAlt('ripple'));
