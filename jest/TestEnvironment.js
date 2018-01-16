@@ -8,7 +8,7 @@ module.exports = class TestEnvironment extends NodeEnvironment {
 
   async setup() {
     await super.setup();
-    await this.setupBrowser();
+    await this.startBrowser();
   }
 
   async teardown() {
@@ -19,15 +19,10 @@ module.exports = class TestEnvironment extends NodeEnvironment {
     return super.runScript(script);
   }
 
-  async setupBrowser() {
+  async startBrowser() {
     if (!global.browser) {
-      console.log('--- new browser', process.pid);
-      global.browser = await puppeteer.launch({
-        headless: false
-      });
+      global.browser = await puppeteer.launch({ headless: false });
       global.page = await global.browser.newPage();
-    } else {
-      console.log('--- browser exists', process.pid);
     }
     this.global.browser = global.browser;
     this.global.page = global.page;
